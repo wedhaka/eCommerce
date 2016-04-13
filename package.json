@@ -1,0 +1,27 @@
+{
+  "name": "eccommerce",
+  "version": "1.0.0",
+  "description": "laptop4u web site creation",
+  "main": "main",
+  "scripts": {
+    "test": "gulp run errors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wedhaka/eCommerce.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Wedhaka Sharanga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wedhaka/eCommerce/issues"
+  },
+  "homepage": "https://github.com/wedhaka/eCommerce#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}

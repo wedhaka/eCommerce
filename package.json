@@ -21,7 +21,12 @@
   "homepage": "https://github.com/wedhaka/eCommerce#readme",
   "devDependencies": {
     "bower": "^1.7.9",
+    "browser-sync": "^2.12.3",
     "gulp": "^3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^3.2.2",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0"
   }
 }

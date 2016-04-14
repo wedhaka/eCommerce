@@ -1,3 +1,4 @@
 *.css.map
+app_dev
 node_modules
 bower_components

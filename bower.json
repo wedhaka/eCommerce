@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce",
+  "description": "related packages",
+  "main": "main",
+  "authors": [
+    "Wedhaka Sharanga"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "required",
+    "list",
+    "here"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "index",
+  "private": true,
+  "devDependencies": {
+    "angular": "^1.5.3",
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6",
+    "components-font-awesome": "^4.5.0"
+  }
+}

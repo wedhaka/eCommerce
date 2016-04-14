@@ -1,4 +1,5 @@
 *.css.map
-bower_components
-node_modules
+<<<<<<< HEAD
 app_dev
+node_modules
+bower_components

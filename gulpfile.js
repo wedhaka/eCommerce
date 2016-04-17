@@ -15,9 +15,15 @@ var vendor_files = [
 
 var vendor_css = {
 	bootstrap: 'bower_components/bootstrap/dist/css/bootstrap.css', //bootstrap
-	fontaweson: 'bower_components/components-font-awesome/scss/**/*.scss',
+	normalizecss: 'src/sass/vendor/normalize.css', //normalization css
+	fontaweson: 'bower_components/components-font-awesome/scss/**/*.scss', //font awesom scss
 };
 
+var vendor_fonts = [
+	'bower_components/bootstrap/dist/fonts/**/*.*',
+	'bower_components/components-font-awesome/fonts/**/*.*',
+
+];
 /*----------------------------
 sass file
 -----------------------------*/
@@ -30,7 +36,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:concat:vendor', function() {
-	return gulp.src(vendor_css.bootstrap)
+	return gulp.src(vendor_css.normalizecss)
+		.pipe(concat('vendor.min.css'))
+		.pipe(addSrc.append(vendor_css.bootstrap))
 		.pipe(concat('vendor.min.css'))
 		.pipe(addSrc.append(vendor_css.fontaweson))
 		.pipe(sass().on('error', sass.logError))
@@ -70,8 +78,8 @@ font file move
 --------------------------------*/
 
 gulp.task('font', function(){
-	return gulp.src('src/index.html')
-		.pipe(gulp.dest('app_dev/'))
+	return gulp.src(vendor_fonts)
+		.pipe(gulp.dest('app_dev/css/fonts/'))
 });
 
 /*------------------------------
@@ -96,4 +104,4 @@ gulp.task('default', ['sass:watch', 'html:watch']);
 main build script
 -------------------------------*/
 
-gulp.task('build', ['js:vendor', 'sass', 'html', 'sass:concat:vendor'])
+gulp.task('build', ['js:vendor', 'sass', 'html', 'sass:concat:vendor', 'font'])

@@ -1,10 +1,165 @@
 @import 'variable';
-@import '320';
-@import '1200';
+@import 'mixing';
 
+/* imort the fonts */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
-*{
-	margin: 0px;
-	padding: 0px;
+/* main css panel */
+.top-panel{
+	@include border-bottom(1px, solid, $borderash);
+	@include padding-bottom(10px);
+	@include padding-top(10px);
+	background-color: $bitwhite;
+	position: relative;
+
+	span{
+		@include padding-left(5px);
+		@include padding-right(5px);
+		@include font(none, $lightblue, capitalize, $toplinksize, $toplinkfont);
+		line-height: 20px;
+
+		i{
+			@include padding-right(5px);
+		}
+
+		a{
+			color: $darkblue;
+			@include padding-left(0px);
+			line-height: 20px;
+		}
+
+		a:hover{
+			color: $lightblue;
+		}
+	}
+
+	a{
+		@include padding-left(10px);
+		@include padding-right(5px);
+		@include font(none, $mediumblue, capitalize, $toplinksize, $toplinkfont);
+	}
+
+	a:hover{
+		@include font(none, $lightred, capitalize, $toplinksize, $toplinkfont);
+	}
+
+	.linkspanel{
+		@include padding-right(15px);
+		@include border-right(1px, solid, $borderash);
+	}
+
+	.reglogpanel{
+		@include padding-left(10px);
+	}
+
+	.social{
+		i{
+			@include font-style( $lightred, 18px);
+		}
+
+		a{
+			float: left;
+			line-height: 20px;
+		}
+	}
 }
 
+.navbar-default{
+	background-color: $bitwhite;
+	@include border(0px, solid, $bitwhite);
+	@include border-radius(0px);
+	@include padding-top(10px);
+	@include padding-bottom(10px);
+	@include margin-bottom(0px);
+}
+
+.navbar-brand{
+	@include padding(0px);
+	@include margin-left(0px !important);
+
+	img{
+		height: 100%;
+		width: auto;
+	}
+}
+
+.navbar-nav{
+	li{
+		@include padding(10px 0px 10px 30px);
+		a{
+			@include font(none, $darkblue !important, uppercase, 12px, $mainlinkfont);
+			font-weight: 500;
+			@include padding(0px 0px);
+		}
+
+		a:hover{
+			@include font(none, $lightblue !important, uppercase, 12px, $mainlinkfont);
+			font-weight: 500;
+		}
+	}
+}
+
+/* search */
+.search{
+	@include padding-top(15px);
+	@include padding-bottom(15px);
+
+	// .input-group, input[type='text']{
+	// 	height: 40px;
+	// }
+}
+
+/* headers */
+.main-header{
+	@include padding-top(5px);
+	@include padding-bottom(5px);
+	@include border-bottom(1px, solid, #e7e7e7);
+}
+
+h1{
+	@include font(none, $lightblue !important, capitalize, 30px, $headersfont);
+	font-weight:800;
+}
+
+.breadcrumb{
+	background-color: #FFF;
+
+	li.active{
+		@include font(none, $darkblue !important, capitalize, 13px, $mainlinkfont);
+
+		a{
+			color: $lightblue;
+		}
+	}
+}
+
+/* footer */
+.footer-border{
+	@include border-top(1px, solid, $borderdarkash);
+	background-color: $lightred;
+}
+
+.footer{
+	@include padding-bottom(5px);
+	@include padding-top(5px);
+	@include font(none, $darkblue !important, capitalize, 12px, $mainlinkfont);
+	line-height: 30px;
+	@include border-top(1px, solid, $borderdarkash);
+}
+/* common css */
+
+.padding-right-0{
+	@include padding-right(0px);
+}
+
+.padding-left-0{
+	@include padding-left(0px);
+}
+/* screen size css */
+@import '320';
+@import '480';
+@import '768';
+@import '920';
+@import '1200';

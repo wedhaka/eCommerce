@@ -1,0 +1,84 @@
+/* border style */
+@mixin border-bottom($px, $type , $color){
+	border-bottom: $px $type $color;
+}
+
+@mixin border-top($px, $type , $color){
+	border-top: $px $type $color;
+}
+
+@mixin border-left($px, $type , $color){
+	border-left: $px $type $color;
+}
+
+@mixin border($px, $type , $color){
+	border: $px $type $color;
+}
+
+@mixin border-right($px, $type , $color){
+	border-right: $px $type $color;
+}
+
+/* border radius */
+@mixin border-radius($px){
+	-webkit-border-radius: $px;
+	-moz-border-radius: $px;
+	border-radius: $px;
+}
+
+/* padding */
+@mixin padding($px){
+	padding: $px;
+}
+
+@mixin padding-top($t){
+	padding-top: $t;
+}
+
+@mixin padding-bottom($b){
+	padding-bottom: $b;
+}
+
+@mixin padding-right($r){
+	padding-right: $r;
+}
+
+@mixin padding-left($l){
+	padding-left: $l;
+}
+
+/* margin */
+@mixin margin($px){
+	margin: $px;
+}
+
+@mixin margin-top($t){
+	margin-top: $t;
+}
+
+@mixin margin-bottom($b){
+	margin-bottom: $b;
+}
+
+@mixin margin-right($r){
+	margin-right: $r;
+}
+
+@mixin margin-left($l){
+	margin-left: $l;
+}
+
+/* font type */
+
+@mixin font($decor, $color, $transform, $size, $family){
+	text-decoration: $decor;
+	color: $color;
+	text-transform: $transform;
+	font-size: $size;
+	font-family: $family;
+}
+
+@mixin font-style( $color, $size){
+	color: $color;
+	font-size: $size;
+}
